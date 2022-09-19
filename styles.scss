@@ -1,0 +1,161 @@
+//    mobile version
+
+$color-gray: lightgray;
+
+* {
+    padding: 10px 0;
+    margin: 0;
+    box-sizing: border-box;
+    background-color: #28536b;
+
+}
+footer{
+    height: 50px;
+    font-size: 25px;
+    margin-top: 200px;
+}
+
+.nav {
+    display: none;
+}
+
+.grid-container {
+    display: grid;
+    width: 100%;
+
+    &__image {
+        background-image: url(./images/shirin.jpg);
+        height: 400px;
+        width: 400px;
+        background-size: cover;
+        background-position: center;
+        border: 2px solid black;
+        margin-left: 90px;
+    }
+
+    &__item {
+        // background-color: purple;
+        color: $color-gray;
+        font-family: sans-serif;
+        font-weight: bold;
+        margin: 10px 0;
+
+        .contact {
+            height: 50px;
+            padding-bottom: 10px;
+        }
+
+        // .tech-skills{
+        //     display: flex;
+        //     justify-content: space-around;
+
+        //     .fa-brands{
+        //         border: 2px black solid;
+        //         color: ;
+        //     }
+        }
+
+    }
+
+
+.project {
+    padding-top: 100px;
+    height: 100px;
+    width: 90%;
+    margin: 20px auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    h2 {
+        font-size: 20px;
+        margin: 10px 0;
+    }
+
+    p {
+        font-size: 12px;
+    }
+    div{
+        background-color: $color-gray;
+        height: 300px;
+        width: 200px;
+        border-radius: 5px;
+        padding: 10px;
+        margin-top: 150px;
+
+        p{
+            background-color: $color-gray ;
+            color: olive;
+        }
+      
+    }
+
+}
+
+@media screen and (min-width: 800px) {
+
+    .grid-container {
+        display: grid;
+        grid-template-areas:
+            "picture about"
+            "picture tech-skills"
+            "picture contact"
+            "project project"
+            "project project"
+        ;
+
+        &__image {
+            grid-area: picture;
+        }
+
+        .about {
+            grid-area: about;
+        }
+
+        .tech-skills {
+            grid-area: tech-skills;
+        }
+
+        .contact {
+            grid-area: contact;
+        }
+
+        .project {
+            grid-area: project;
+        }
+    }
+
+    .nav {
+        display: flex;
+        justify-content: space-between;
+        
+
+        .nav__logo {
+            width: 30%;
+            color: $color-gray;
+            font-family: sans-serif;
+            font-size: 40px;
+            height: 70px;
+            background-color: lightgray;
+            margin-left: 5%;
+        }
+
+        .nav__links {
+            display: flex;
+            width: 50%;
+            // background-color: black;
+            justify-content: space-around;
+            // align-items: center;
+
+            a {
+                padding: 5px;
+                color: white;
+                font-family: sans-serif;
+                font-weight: bold;
+                font-size: 20px;
+                float: right;
+
+            }
+        }
+    }
+}
